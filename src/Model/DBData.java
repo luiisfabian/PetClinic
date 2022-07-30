@@ -4,35 +4,16 @@
  */
 package Model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
 /**
  *
  * @author fmunoz
  */
-public class DBData {
+public class DBData {   
 
     private final String driver = "com.mysql.jdbc.Driver";
     private final String user = "root";
-    private final String password = "";
-    private final String url = "jdbc:mysql://localhost:3308/petsClinic";
-    Connection con;
-
-    public DBData() {
-        try {
-            //Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(url, user, password);
-            System.out.print("Database is connected !");
-        } catch (SQLException e) {
-            System.out.print("no Conectado");
-        }
-    }
-
-    public Connection getConnection() {
-        return con;
-    }
+    private final String password="";
+    private final String url="jdbc:mysql://localhost:3307/petsClinic";
 
     /**
      * @return the driver
@@ -61,5 +42,9 @@ public class DBData {
     public String getUrl() {
         return url;
     }
+    
+    
+    
+    
 
 }

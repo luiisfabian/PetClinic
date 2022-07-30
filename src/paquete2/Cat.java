@@ -21,10 +21,12 @@ public class Cat extends Pet {
         System.out.println("su estado de salud es " + getHealthStatus() + " la raza es " + getBreed());
     }
 
-    public Cat(String breed, String code, String name, int born_year, String Color, String healthStatus) {
-        super(code, name, born_year, Color, healthStatus);
+    public Cat(String breed, int petId, String code, String name, int born_year, String Color, String healthStatus) {
+        super(petId, code, name, born_year, Color, healthStatus);
         this.breed = breed;
     }
+    
+ 
 
     /**
      * @return the breed

@@ -11,12 +11,13 @@ import interfaces.*;
  * @author fmunoz
  */
 public class Pet implements IAnimal, IVertebrate{
+    private int petId;
     private String code;
     private String name;
     private int born_year;
     private String Color;
     private String healthStatus;
-    private Veterinary veterinary;
+//    private Veterinary veterinary;
     
     public void Eat(){
         System.out.println("La mascota come");
@@ -32,7 +33,8 @@ public class Pet implements IAnimal, IVertebrate{
         
     }
 
-    public Pet(String code, String name, int born_year, String Color, String healthStatus) {
+    public Pet(int petId, String code, String name, int born_year, String Color, String healthStatus) {
+        this.petId = petId;
         this.code = code;
         this.name = name;
         this.born_year = born_year;
@@ -40,6 +42,8 @@ public class Pet implements IAnimal, IVertebrate{
         this.healthStatus = healthStatus;
     }
 
+
+    
     /**
      * @return the code
      */
@@ -113,16 +117,16 @@ public class Pet implements IAnimal, IVertebrate{
     /**
      * @return the veterinary
      */
-    public Veterinary getVeterinary() {
-        return veterinary;
-    }
-
-    /**
-     * @param veterinary the veterinary to set
-     */
-    public void setVeterinary(Veterinary veterinary) {
-        this.veterinary = veterinary;
-    }
+//    public Veterinary getVeterinary() {
+//        return veterinary;
+//    }
+//
+//    /**
+//     * @param veterinary the veterinary to set
+//     */
+//    public void setVeterinary(Veterinary veterinary) {
+//        this.veterinary = veterinary;
+//    }
 
     @Override
     public String getAnimalType() {
@@ -132,6 +136,20 @@ public class Pet implements IAnimal, IVertebrate{
     @Override
     public int getNumberOfBones() {
         return 0;
+    }
+
+    /**
+     * @return the petId
+     */
+    public int getPetId() {
+        return petId;
+    }
+
+    /**
+     * @param petId the petId to set
+     */
+    public void setPetId(int petId) {
+        this.petId = petId;
     }
     
     

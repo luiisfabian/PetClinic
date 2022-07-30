@@ -10,32 +10,34 @@ package paquete2;
  */
 public class Dog extends Pet {
 
+    private int dogId;
     private String breed;
     private boolean pedigree;
+
+    public Dog(int dogId, String breed, boolean pedigree, int petId, String code, String name, int born_year, String Color, String healthStatus) {
+        super(petId, code, name, born_year, Color, healthStatus);
+        this.dogId = dogId;
+        this.breed = breed;
+        this.pedigree = pedigree;
+    }
 
     public void WalkAround() {
         System.out.println("El perro camina solo");
     }
-    
-    public void WalkAround(int km){
-        System.out.println("El perro " + super.getName() + " esta corriento " + km + " km" );
+
+    public void WalkAround(int km) {
+        System.out.println("El perro " + super.getName() + " esta corriento " + km + " km");
     }
-    
-    public void WalkAround(boolean dogLeash){
+
+    public void WalkAround(boolean dogLeash) {
         String hasLeash = dogLeash ? "Con correa" : "Sin Correa";
-        
-        System.out.println("El perro " + super.getName() + " esta  " + hasLeash );
+
+        System.out.println("El perro " + super.getName() + " esta  " + hasLeash);
     }
 
     public void mostrarDatosPerro() {
         System.out.println("el codigo del perro es " + getCode() + " el nombre es " + getName() + " año de nacimiento es " + getBorn_year() + " color es " + getColor() + "\n");
         System.out.println("su estado de salud es " + getHealthStatus() + " la raza es " + getBreed() + " y come pedigree? " + isPedigree());
-    }
-
-    public Dog(String breed, boolean pedigree, String code, String name, int born_year, String Color, String healthStatus) {
-        super(code, name, born_year, Color, healthStatus);
-        this.breed = breed;
-        this.pedigree = pedigree;
     }
 
     /**
@@ -65,26 +67,27 @@ public class Dog extends Pet {
     public void setPedigree(boolean pedigree) {
         this.pedigree = pedigree;
     }
-    
-       
-    @Override    
-    public void Sound(){
+
+    @Override
+    public void Sound() {
         System.out.println(" el perro " + super.getName() + " Hace Guau");
     }
-    
-    
+
     @Override
-    public int getNumberOfBones(){
+    public int getNumberOfBones() {
         return 300;
     }
-    
+
     @Override
-    public String getAnimalType(){
+    public String getAnimalType() {
         return "Perro";
     }
-    
 
-    
-    
-    
+    /**
+     * @return the dogId
+     */
+    public int getDogId() {
+        return dogId;
+    }
+
 }

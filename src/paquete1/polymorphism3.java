@@ -13,7 +13,7 @@ import paquete2.*;
 public class polymorphism3 {
 
     public static void main(String[] args) {
-        Dog perro = new Dog("Pitbull", true, "123", "Cratus", 1, "cafe", "Saludable");
+        Dog perro = new Dog(0, "Pitbull", true, 123, "1", "cratus", 1, "cafe", "saludable");
         
         
         perro.WalkAround();
