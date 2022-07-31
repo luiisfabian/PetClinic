@@ -10,10 +10,10 @@ package Model;
  */
 public class DBData {   
 
-    private final String driver = "com.mysql.jdbc.Driver";
+    private final String driver = "com.mysql.cj.jdbc.Driver";
     private final String user = "root";
     private final String password="";
-    private final String url="jdbc:mysql://localhost:3307/petsClinic";
+    private final String url="jdbc:mysql://localhost:3307/petClinic";
 
     /**
      * @return the driver

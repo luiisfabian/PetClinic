@@ -9,7 +9,6 @@ package paquete2;
  * @author fmunoz
  */
 public class Dog extends Pet {
-
     private int dogId;
     private String breed;
     private boolean pedigree;
@@ -20,6 +19,9 @@ public class Dog extends Pet {
         this.breed = breed;
         this.pedigree = pedigree;
     }
+
+    
+    
 
     public void WalkAround() {
         System.out.println("El perro camina solo");
@@ -33,39 +35,6 @@ public class Dog extends Pet {
         String hasLeash = dogLeash ? "Con correa" : "Sin Correa";
 
         System.out.println("El perro " + super.getName() + " esta  " + hasLeash);
-    }
-
-    public void mostrarDatosPerro() {
-        System.out.println("el codigo del perro es " + getCode() + " el nombre es " + getName() + " año de nacimiento es " + getBorn_year() + " color es " + getColor() + "\n");
-        System.out.println("su estado de salud es " + getHealthStatus() + " la raza es " + getBreed() + " y come pedigree? " + isPedigree());
-    }
-
-    /**
-     * @return the breed
-     */
-    public String getBreed() {
-        return breed;
-    }
-
-    /**
-     * @param breed the breed to set
-     */
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    /**
-     * @return the pedigree
-     */
-    public boolean isPedigree() {
-        return pedigree;
-    }
-
-    /**
-     * @param pedigree the pedigree to set
-     */
-    public void setPedigree(boolean pedigree) {
-        this.pedigree = pedigree;
     }
 
     @Override
@@ -89,5 +58,42 @@ public class Dog extends Pet {
     public int getDogId() {
         return dogId;
     }
+
+    /**
+     * @return the breed
+     */
+    public String getBreed() {
+        return breed;
+    }
+
+    /**
+     * @return the pedigree
+     */
+    public boolean isPedigree() {
+        return pedigree;
+    }
+
+    /**
+     * @param dogId the dogId to set
+     */
+    public void setDogId(int dogId) {
+        this.dogId = dogId;
+    }
+
+    /**
+     * @param breed the breed to set
+     */
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    /**
+     * @param pedigree the pedigree to set
+     */
+    public void setPedigree(boolean pedigree) {
+        this.pedigree = pedigree;
+    }
+
+
 
 }

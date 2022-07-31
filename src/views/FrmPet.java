@@ -499,7 +499,7 @@ public class FrmPet extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "LLene todos los campos");
             } else {
                 Dog perro = new Dog(0, breed, pedigree, 0, code, name, bornYear, color, healthStatus);
-                dogObjectList.add(perro);
+                //dogObjectList.add(perro);
                 controllerPet.CreatePet(perro);
                 this.fillJListDog();
                 this.clearDogFields();

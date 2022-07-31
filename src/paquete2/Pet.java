@@ -42,8 +42,46 @@ public class Pet implements IAnimal, IVertebrate{
         this.healthStatus = healthStatus;
     }
 
-
     
+
+    /**
+     * @return the veterinary
+     */
+//    public Veterinary getVeterinary() {
+//        return veterinary;
+//    }
+//
+//    /**
+//     * @param veterinary the veterinary to set
+//     */
+//    public void setVeterinary(Veterinary veterinary) {
+//        this.veterinary = veterinary;
+//    }
+
+    @Override
+    public String getAnimalType() {
+        return "Domestico";
+    }
+
+    @Override
+    public int getNumberOfBones() {
+        return 0;
+    }
+
+    /**
+     * @return the petId
+     */
+    public int getPetId() {
+        return petId;
+    }
+
+    /**
+     * @param petId the petId to set
+     */
+    public void setPetId(int petId) {
+        this.petId = petId;
+    }
+
     /**
      * @return the code
      */
@@ -112,44 +150,6 @@ public class Pet implements IAnimal, IVertebrate{
      */
     public void setHealthStatus(String healthStatus) {
         this.healthStatus = healthStatus;
-    }
-
-    /**
-     * @return the veterinary
-     */
-//    public Veterinary getVeterinary() {
-//        return veterinary;
-//    }
-//
-//    /**
-//     * @param veterinary the veterinary to set
-//     */
-//    public void setVeterinary(Veterinary veterinary) {
-//        this.veterinary = veterinary;
-//    }
-
-    @Override
-    public String getAnimalType() {
-        return "Domestico";
-    }
-
-    @Override
-    public int getNumberOfBones() {
-        return 0;
-    }
-
-    /**
-     * @return the petId
-     */
-    public int getPetId() {
-        return petId;
-    }
-
-    /**
-     * @param petId the petId to set
-     */
-    public void setPetId(int petId) {
-        this.petId = petId;
     }
     
     
