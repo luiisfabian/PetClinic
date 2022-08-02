@@ -13,7 +13,7 @@ import paquete2.*;
 public class polymorphism {
     public static void main(String[] args) {
         Dog perro = new Dog(0, "Pitbull", true, 123, "1", "cratus", 1, "cafe", "saludable");
-        Cat gato = new Cat("Criollo", 123, "123", "margin", 1, "Verde", "saludable");
+        Cat gato = new Cat(0, "Criollo", 123, "123", "margin", 1, "Verde", "saludable");
 
         
         Doctor doct = new Doctor("Elkin", "23233232");

@@ -9,7 +9,7 @@ package paquete2;
  * @author fmunoz
  */
 public class Cat extends Pet {
-
+    private int catId;
     private String breed;
 
     public void SelfCleaning() {
@@ -21,26 +21,15 @@ public class Cat extends Pet {
         System.out.println("su estado de salud es " + getHealthStatus() + " la raza es " + getBreed());
     }
 
-    public Cat(String breed, int petId, String code, String name, int born_year, String Color, String healthStatus) {
+    public Cat(int catId, String breed, int petId, String code, String name, int born_year, String Color, String healthStatus) {
         super(petId, code, name, born_year, Color, healthStatus);
+        this.catId = catId;
         this.breed = breed;
     }
+
     
- 
 
-    /**
-     * @return the breed
-     */
-    public String getBreed() {
-        return breed;
-    }
-
-    /**
-     * @param breed the breed to set
-     */
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
+    
 
    
     @Override    
@@ -56,6 +45,34 @@ public class Cat extends Pet {
     @Override
     public String getAnimalType(){
         return "Gato";
+    }
+
+    /**
+     * @return the catId
+     */
+    public int getCatId() {
+        return catId;
+    }
+
+    /**
+     * @param catId the catId to set
+     */
+    public void setCatId(int catId) {
+        this.catId = catId;
+    }
+
+    /**
+     * @return the breed
+     */
+    public String getBreed() {
+        return breed;
+    }
+
+    /**
+     * @param breed the breed to set
+     */
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
     
     

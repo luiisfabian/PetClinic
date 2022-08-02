@@ -5,6 +5,7 @@
 package Controller;
 
 import Model.*;
+import java.util.LinkedList;
 import paquete2.*;
 
 /**
@@ -85,6 +86,24 @@ public class ControllerPet {
 
             }
             return pet;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public LinkedList<Pet> listPet(String type) {
+        LinkedList<Pet> petList = null;
+        try {
+            switch (type) {
+                case "Gato":
+                    petList = this.modelCat.listPet();
+                    break;
+                case "Perro":
+                    petList = this.modelDog.listPet();
+                    break;
+
+            }
+            return petList;
         } catch (Exception e) {
             return null;
         }
