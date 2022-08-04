@@ -17,7 +17,7 @@ import paquete2.*;
 public class FrmPet extends javax.swing.JFrame {
 
     LinkedList<Pet> ObjectList = new LinkedList<>();
-   // LinkedList<Pet> catObjectList = new LinkedList<>();
+    // LinkedList<Pet> catObjectList = new LinkedList<>();
     ControllerPet controllerPet;
 
     /**
@@ -139,7 +139,12 @@ public class FrmPet extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 102, 255));
         setResizable(false);
+
+        jTabbedPane1.setBackground(new java.awt.Color(255, 102, 255));
+
+        jPanel1.setBackground(new java.awt.Color(255, 102, 255));
 
         petList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Pet 1", "Pet 2", "Pet 3", "Pet 4", "Pet 5" };
@@ -167,6 +172,8 @@ public class FrmPet extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("List Pets", jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(255, 102, 255));
+
         jLabel2.setText("Code");
 
         jLabel3.setText("Name");
@@ -188,6 +195,8 @@ public class FrmPet extends javax.swing.JFrame {
             }
         });
 
+        btnCrearCat.setBackground(new java.awt.Color(51, 255, 51));
+        btnCrearCat.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         btnCrearCat.setText("Crear");
         btnCrearCat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,6 +204,8 @@ public class FrmPet extends javax.swing.JFrame {
             }
         });
 
+        btnBuscarCat.setBackground(new java.awt.Color(102, 255, 255));
+        btnBuscarCat.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         btnBuscarCat.setText("Buscar");
         btnBuscarCat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,6 +213,8 @@ public class FrmPet extends javax.swing.JFrame {
             }
         });
 
+        btnEditarCat.setBackground(new java.awt.Color(255, 204, 51));
+        btnEditarCat.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         btnEditarCat.setText("Editar");
         btnEditarCat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +222,8 @@ public class FrmPet extends javax.swing.JFrame {
             }
         });
 
+        btnEliminarCat.setBackground(new java.awt.Color(255, 51, 51));
+        btnEliminarCat.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         btnEliminarCat.setText("Eliminar");
         btnEliminarCat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,7 +254,7 @@ public class FrmPet extends javax.swing.JFrame {
                 .addComponent(btnCrearCat)
                 .addGap(66, 66, 66)
                 .addComponent(btnBuscarCat)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(btnEditarCat)
                 .addGap(34, 34, 34)
                 .addComponent(btnEliminarCat)
@@ -321,6 +336,8 @@ public class FrmPet extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Cats Manager", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(204, 102, 255));
+
         jLabel8.setText("Code");
 
         jLabel9.setText("Name");
@@ -337,6 +354,8 @@ public class FrmPet extends javax.swing.JFrame {
 
         selectBreedDog.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pincher", "Bull Dog", "Pitbull", "Labrador" }));
 
+        btnEliminarDog.setBackground(new java.awt.Color(255, 51, 51));
+        btnEliminarDog.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         btnEliminarDog.setText("Eliminar");
         btnEliminarDog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -344,6 +363,8 @@ public class FrmPet extends javax.swing.JFrame {
             }
         });
 
+        btnEditarDog.setBackground(new java.awt.Color(255, 204, 51));
+        btnEditarDog.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         btnEditarDog.setText("Editar");
         btnEditarDog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -351,6 +372,8 @@ public class FrmPet extends javax.swing.JFrame {
             }
         });
 
+        btnBuscarDog.setBackground(new java.awt.Color(102, 255, 255));
+        btnBuscarDog.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         btnBuscarDog.setText("Buscar");
         btnBuscarDog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -358,6 +381,8 @@ public class FrmPet extends javax.swing.JFrame {
             }
         });
 
+        btnCrearDog.setBackground(new java.awt.Color(51, 255, 51));
+        btnCrearDog.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         btnCrearDog.setText("Crear");
         btnCrearDog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -434,7 +459,7 @@ public class FrmPet extends javax.swing.JFrame {
                                                 .addComponent(selectBreedDog, 0, 190, Short.MAX_VALUE)))))
                                 .addContainerGap(51, Short.MAX_VALUE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                                 .addComponent(btnEditarDog)
                                 .addGap(66, 66, 66)
                                 .addComponent(btnEliminarDog)
@@ -486,7 +511,7 @@ public class FrmPet extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Dogs Manager", jPanel3);
 
-        jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 36)); // NOI18N
         jLabel1.setText("Pets Clinic");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -599,27 +624,26 @@ public class FrmPet extends javax.swing.JFrame {
     private void btnEliminarDogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDogActionPerformed
         // TODO add your handling code here:
         String code = txtCodeDog.getText();
-        boolean found = false;
+        System.out.println(code);
+        controllerPet.DeletePet(code, "Perro");
 
-//        for (Dog perro : dogObjectList) {
-//            if (perro.getCode().equals(code)) {
-//                this.dogObjectList.remove(perro);
-//                clearDogFields();
-//                this.fillJListDog();
-//                found = true;
-//                break;
-//            }
-//        }
-        if (!found) {
-            JOptionPane.showMessageDialog(this, "Codigo no encontrado");
-        }
+        JOptionPane.showMessageDialog(this, "Perro removed sucessfuly");
+        this.clearCatFields();
+        this.fillJListCat();
+
+
     }//GEN-LAST:event_btnEliminarDogActionPerformed
 
     private void btnEliminarCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCatActionPerformed
         // TODO add your handling code here:
         String code = txtCodeCat.getText();
-        boolean found = false;
 
+        //  boolean found = false;
+        controllerPet.DeletePet(code, "Gato");
+
+        JOptionPane.showMessageDialog(this, "Gato removed sucessfuly");
+        this.clearCatFields();
+        this.fillJListCat();
 //        for (Cat gato : catObjectList) {
 //            if (gato.getCode().equals(code)) {
 //                this.catObjectList.remove(gato);
@@ -629,10 +653,10 @@ public class FrmPet extends javax.swing.JFrame {
 //                break;
 //            }
 //        }
-        if (!found) {
-            JOptionPane.showMessageDialog(this, "Codigo no encontrado");
-
-        }
+//        if (!found) {
+//            JOptionPane.showMessageDialog(this, "Codigo no encontrado");
+//
+//        }
     }//GEN-LAST:event_btnEliminarCatActionPerformed
 
     private void btnEditarCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarCatActionPerformed

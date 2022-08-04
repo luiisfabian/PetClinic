@@ -56,14 +56,14 @@ public class ControllerPet {
         }
     }
 
-    public boolean DeletePet(Pet pet) {
+    public boolean DeletePet(String code, String type) {
         try {
-            switch (pet.getAnimalType()) {
+            switch (type) {
                 case "Gato":
-                    this.modelCat.DeletePet((Cat) pet);
+//                    pet = this.modelCat.DeletePet(code);
                     break;
                 case "Perro":
-                    this.modelDog.DeletePet((Dog) pet);
+                    this.modelDog.DeletePet(code);
                     break;
 
             }
@@ -72,6 +72,8 @@ public class ControllerPet {
             return false;
         }
     }
+       
+
 
     public Pet SearchPet(String code, String type) {
         Pet pet = null;

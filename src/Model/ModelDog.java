@@ -86,13 +86,19 @@ public class ModelDog {
 
     }
 
-    public boolean DeletePet(Dog perro) {
-        try {
+    public boolean DeletePet(String code) {
+        Dog dog = null;
 
-            return true;
+        try ( Connection conn = DriverManager.getConnection(dbData.getUrl(), dbData.getUser(), dbData.getPassword())) {
+            String query = "DELETE FROM Pet WHERE code = ?";
+            PreparedStatement st = conn.prepareStatement(query);
+            st.setString(1, code);
+            st.execute();
+            return st.execute();
         } catch (Exception e) {
             return false;
         }
+
     }
 
     public Pet SearchPet(String code) {
@@ -121,36 +127,31 @@ public class ModelDog {
             return dog;
         }
     }
-    
+
     public LinkedList<Pet> listPet() {
-        LinkedList<Pet> dogList =  new LinkedList<>();
+        LinkedList<Pet> dogList = new LinkedList<>();
 
-        try (Connection conn= DriverManager.getConnection(dbData.getUrl(), dbData.getUser(),dbData.getPassword()) ) {
+        try ( Connection conn = DriverManager.getConnection(dbData.getUrl(), dbData.getUser(), dbData.getPassword())) {
             String query = "SELECT * FROM Pet as p INNER join Dog as d on p.id = d.petId";
-            PreparedStatement statementPet =  conn.prepareStatement(query);
+            PreparedStatement statementPet = conn.prepareStatement(query);
             ResultSet result = statementPet.executeQuery();
-            while (result.next()){
+            while (result.next()) {
                 int petId = result.getInt(1);
-                String petCode= result.getString(2);
-                String petName= result.getString(3);
-                int petBornYear= result.getInt(4);
-                String petColor= result.getString(5);
-                String petHealthStatus= result.getString(6);
+                String petCode = result.getString(2);
+                String petName = result.getString(3);
+                int petBornYear = result.getInt(4);
+                String petColor = result.getString(5);
+                String petHealthStatus = result.getString(6);
                 int dogId = result.getInt(7);
-                String petBreed= result.getString(8);
-                Boolean petPedigree=result.getBoolean(9);
-                Dog dog=new Dog(dogId, petBreed, petPedigree, petId, petCode, petName, petBornYear, petColor, petHealthStatus);
+                String petBreed = result.getString(8);
+                Boolean petPedigree = result.getBoolean(9);
+                Dog dog = new Dog(dogId, petBreed, petPedigree, petId, petCode, petName, petBornYear, petColor, petHealthStatus);
                 dogList.add(dog);
-
             }
-
-
-          return dogList; 
-        }catch(Exception e) {
+            return dogList;
+        } catch (Exception e) {
             return dogList;
         }
     }
-    
-    
 
 }

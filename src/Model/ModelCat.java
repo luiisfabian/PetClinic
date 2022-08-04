@@ -65,7 +65,7 @@ public class ModelCat {
 
     public boolean EditPet(Cat gato) {
 
-       try ( Connection conn = DriverManager.getConnection(dbData.getUrl(), dbData.getUser(), dbData.getPassword())) {
+        try ( Connection conn = DriverManager.getConnection(dbData.getUrl(), dbData.getUser(), dbData.getPassword())) {
             String queryPet = " UPDATE Pet SET code = ?, name = ? , born_year = ?, color = ? , health_status = ? WHERE id = ?";
             PreparedStatement statementPet = conn.prepareStatement(queryPet);
             statementPet.setString(1, gato.getCode());
@@ -88,10 +88,15 @@ public class ModelCat {
         }
     }
 
-    public boolean DeletePet(Cat gato) {
-        try {
+    public boolean DeletePet(String code) {
+        Dog dog = null;
 
-            return true;
+        try ( Connection conn = DriverManager.getConnection(dbData.getUrl(), dbData.getUser(), dbData.getPassword())) {
+            String query = "DELETE FROM Pet WHERE code = ?";
+            PreparedStatement st = conn.prepareStatement(query);
+            st.setString(1, code);
+            st.execute();
+            return st.execute();
         } catch (Exception e) {
             return false;
         }
